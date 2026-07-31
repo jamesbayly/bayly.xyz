@@ -1,5 +1,4 @@
 import {
-  ArrowDownRight,
   ArrowRight,
   Check,
   Code2,
@@ -7,17 +6,26 @@ import {
   Layers3,
   Mail,
   Menu,
-  MoveRight,
   ShieldCheck,
   Sparkles,
   X,
 } from "lucide-react"
 import { useState } from "react"
 
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+
 const services = [
   {
     icon: Sparkles,
-    number: "01",
     title: "AI product strategy & development",
     copy: "Take an AI-enabled product from an early idea to a deployed, useful system.",
     items: [
@@ -28,7 +36,6 @@ const services = [
   },
   {
     icon: Layers3,
-    number: "02",
     title: "Fractional product & technology leadership",
     copy: "Senior product and technical leadership without the delay or cost of a permanent executive hire.",
     items: [
@@ -39,7 +46,6 @@ const services = [
   },
   {
     icon: Code2,
-    number: "03",
     title: "Senior engineering & delivery",
     copy: "Experienced hands-on capacity for teams that need critical work completed properly.",
     items: [
@@ -50,7 +56,6 @@ const services = [
   },
   {
     icon: ShieldCheck,
-    number: "04",
     title: "AI transformation, governance & assurance",
     copy: "Move from generic AI pilots to proportionate controls and a practical operating model.",
     items: [
@@ -61,64 +66,56 @@ const services = [
   },
 ]
 
-const projects = [
+const caseStudies = [
   {
-    title: "Porticus",
+    name: "Porticus",
     role: "Founder",
-    category: "AI compliance platform",
     copy: "Building an AI-native platform that helps organisations manage overlapping compliance frameworks without duplicating controls, documents and evidence.",
     tags: ["Knowledge graphs", "LLM pipelines", "Azure"],
-    featured: true,
   },
   {
-    title: "SubQuery & OnFinality",
+    name: "SubQuery & OnFinality",
     role: "Chief Product Officer",
-    category: "Blockchain infrastructure",
     copy: "Led product, capital raising and a 40+ person distributed team through seed stage, product-market fit, token generation and public listing.",
     tags: ["$20M+ raised", "200K+ community", "Global team"],
-    featured: true,
   },
   {
-    title: "8ai",
+    name: "8ai",
     role: "Co-founder & CTO",
-    category: "AI customer service",
     copy: "Built a production AI support product from zero to revenue, using multi-agent workflows and knowledge-grounded customer conversations.",
     tags: ["RAG", "Multi-agent", "Cashflow positive"],
-    featured: true,
   },
   {
-    title: "AI transformation & governance",
+    name: "AI transformation & governance",
     role: "Confidential NZ organisations",
-    category: "Government & high-trust environments",
     copy: "Designed practical AI transformation, governance and assurance approaches for organisations balancing opportunity, safety and public trust.",
     tags: ["ISO 42001", "NIST AI RMF", "Assurance"],
-    featured: true,
   },
   {
-    title: "Sentro",
+    name: "Sentro",
     role: "Technical product leadership & engineering",
-    category: "Insurance technology",
     copy: "Led delivery of a group-insurance platform, then returned to deliver production features across .NET, Angular and React.",
     tags: ["Regulated delivery", ".NET", "Azure"],
-    featured: true,
   },
 ]
 
-const moreWork = [
+const audiences = [
   [
-    "AI investment intelligence",
-    "Citation-backed investment memos from unstructured startup material.",
-  ],
-  ["Backstory", "Product strategy for sustainability-certification software."],
-  [
-    "Bitquery",
-    "AI-enabled RevOps systems and lead intelligence for blockchain data.",
+    "Founders & early-stage teams",
+    "You need senior technical and product leadership to turn a real opportunity into a credible, production-ready product.",
   ],
   [
-    "Workplace SaaS",
-    "Production features, test automation and architecture improvements.",
+    "Product & technology leaders",
+    "You have an important initiative or delivery problem that needs experienced execution, not another layer of management.",
   ],
-  ["Task / Plexure", "Product work for global marketing automation at scale."],
+  [
+    "Agencies & delivery partners",
+    "You need a senior contractor who can enter a client engagement, handle ambiguity and deliver without constant supervision.",
+  ],
+  [
+    "Government & regulated organisations",
+    "You need to identify where AI creates value and move from policy into safe, practical implementation.",
+  ],
 ]
 
 const capabilities = [
@@ -140,39 +137,46 @@ const capabilities = [
   ],
 ]
 
-function App() {
-  const [menuOpen, setMenuOpen] = useState(false)
+function LinkButton({
+  href,
+  children,
+  variant = "default",
+}: {
+  href: string
+  children: React.ReactNode
+  variant?: "default" | "outline"
+}) {
+  return (
+    <Button variant={variant} render={<a href={href} />}>
+      {children}
+    </Button>
+  )
+}
 
+export default function App() {
+  const [menuOpen, setMenuOpen] = useState(false)
   const closeMenu = () => setMenuOpen(false)
 
   return (
-    <div className="site-shell">
-      <header className="site-header">
-        <div className="nav-wrap container">
-          <a
-            className="wordmark"
-            href="#top"
-            onClick={closeMenu}
-            aria-label="James Bayly home"
-          >
-            <span>JAMES</span>
-            <span>BAYLY</span>
+    <div className="min-h-svh">
+      <header className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur">
+        <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6">
+          <a href="#top" onClick={closeMenu} className="no-underline">
+            James Bayly
           </a>
-
           <button
-            className="menu-toggle"
             type="button"
+            className="md:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
             aria-expanded={menuOpen}
             aria-controls="site-navigation"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            onClick={() => setMenuOpen((open) => !open)}
+            aria-label="Toggle navigation"
           >
             {menuOpen ? <X /> : <Menu />}
           </button>
-
           <nav
-            className={menuOpen ? "nav-links nav-links-open" : "nav-links"}
             id="site-navigation"
+            className={`${menuOpen ? "flex" : "hidden"} absolute top-16 right-0 left-0 flex-col gap-4 border-b bg-background p-4 md:static md:flex md:flex-row md:items-center md:border-0 md:p-0`}
           >
             <a href="#services" onClick={closeMenu}>
               Services
@@ -183,323 +187,206 @@ function App() {
             <a href="#about" onClick={closeMenu}>
               About
             </a>
-            <a className="nav-contact" href="#contact" onClick={closeMenu}>
-              Let&apos;s talk <ArrowUpRightIcon />
-            </a>
+            <LinkButton href="#contact">
+              Let&apos;s talk <ArrowRight />
+            </LinkButton>
           </nav>
         </div>
       </header>
 
       <main id="top">
-        <section className="hero section-grid">
-          <div className="hero-grid container">
-            <div className="hero-copy reveal">
-              <p className="eyebrow">
-                <span /> AI product & technology consultant
-              </p>
-              <h1>
-                Turn complex ideas into <em>working</em> products.
-              </h1>
-              <p className="hero-intro">
+        <section className="container mx-auto grid gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:items-center md:py-24">
+          <div className="space-y-6">
+            <Badge variant="secondary">
+              AI product & technology consultant
+            </Badge>
+            <div className="space-y-4">
+              <h1 className="">Turn complex ideas into working products.</h1>
+              <p className="max-w-2xl text-muted-foreground">
                 I help founders, product leaders, agencies and regulated
                 organisations solve difficult product and delivery problems,
                 from strategy and architecture through to engineering, launch
                 and growth.
               </p>
-              <div className="hero-actions">
-                <a className="button button-primary" href="#contact">
-                  Talk to me about your project <ArrowRight />
-                </a>
-                <a className="text-link" href="#work">
-                  See selected work <ArrowDownRight />
-                </a>
-              </div>
-              <p className="availability">
-                <span className="availability-dot" /> Queenstown-based. Working
-                across New Zealand, Australia and worldwide.
-              </p>
             </div>
-
-            <div className="hero-visual reveal reveal-delay">
-              <div className="portrait-frame">
-                <div className="portrait-placeholder">
-                  <div className="portrait-placeholder-label">
-                    Headshot
-                    <br />
-                    placeholder
-                  </div>
-                  <div className="portrait-orbit orbit-one" />
-                  <div className="portrait-orbit orbit-two" />
-                </div>
-                <div className="portrait-caption">
-                  <span>01</span> Product. Technology. Delivery.
-                </div>
-              </div>
-              <div className="hero-statement">
-                Strategy when needed.
-                <br />
-                <strong>Delivery always.</strong>
-              </div>
+            <div className="flex flex-wrap gap-3">
+              <LinkButton href="#contact">
+                Talk to me about your project <ArrowRight />
+              </LinkButton>
+              <LinkButton href="#work" variant="outline">
+                See selected work
+              </LinkButton>
             </div>
-          </div>
-        </section>
-
-        <section className="proof-strip" aria-label="Selected credentials">
-          <div className="proof-grid container">
-            <div>
-              <strong>$20M+</strong>
-              <span>raised across three rounds</span>
-            </div>
-            <div>
-              <strong>40+</strong>
-              <span>people in a global team</span>
-            </div>
-            <div>
-              <strong>200K+</strong>
-              <span>developer community built</span>
-            </div>
-            <div>
-              <strong>0 → revenue</strong>
-              <span>with a production AI startup</span>
-            </div>
-            <div>
-              <strong>First class</strong>
-              <span>BEng Software Engineering</span>
-            </div>
-          </div>
-        </section>
-
-        <section className="section value-section">
-          <div className="two-column-heading container">
-            <p className="section-kicker">The difference</p>
-            <div>
-              <h2>
-                There is a wide gap between a good plan and a finished product.
-              </h2>
-              <p className="section-intro">
-                Complex projects rarely fail because nobody can write a strategy
-                deck. They fail in the execution gap. I bridge it by working
-                across product judgement, engineering, delivery and commercial
-                reality.
-              </p>
-            </div>
-          </div>
-          <div className="value-grid container">
-            <ValueItem
-              number="01"
-              title="Product judgement"
-              copy="Clear priorities, practical roadmaps and decisions grounded in customer, technical and commercial understanding."
-            />
-            <ValueItem
-              number="02"
-              title="Hands-on engineering"
-              copy="Scalable production software across AI, React, TypeScript, Node.js, .NET, Python and cloud infrastructure."
-            />
-            <ValueItem
-              number="03"
-              title="Delivery leadership"
-              copy="A senior operator who can align stakeholders, unblock teams and stay accountable through implementation."
-            />
-            <ValueItem
-              number="04"
-              title="Commercial experience"
-              copy="Fundraising, pricing, enterprise sales, partnerships and go-to-market from early stage through scale."
-            />
-            <ValueItem
-              number="05"
-              title="Governance & assurance"
-              copy="Practical AI risk controls for regulated and high-trust environments, designed to enable real progress."
-            />
-          </div>
-        </section>
-
-        <section className="section audience-section">
-          <div className="audience-layout container">
-            <div className="audience-intro">
-              <p className="section-kicker">Who I work with</p>
-              <h2>Senior capacity for the work that matters most.</h2>
-            </div>
-            <div className="audience-list">
-              <AudienceItem
-                number="01"
-                title="Founders & early-stage teams"
-                copy="You need senior technical and product leadership to turn a real opportunity into a credible, production-ready product."
-              />
-              <AudienceItem
-                number="02"
-                title="Product & technology leaders"
-                copy="You have an important initiative or delivery problem that needs experienced execution, not another layer of management."
-              />
-              <AudienceItem
-                number="03"
-                title="Agencies & delivery partners"
-                copy="You need a senior contractor who can enter a client engagement, handle ambiguity and deliver without constant supervision."
-              />
-              <AudienceItem
-                number="04"
-                title="Government & regulated organisations"
-                copy="You need to identify where AI creates value and move from policy into safe, practical implementation."
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="section services-section" id="services">
-          <div className="section-title-row container">
-            <div>
-              <p className="section-kicker">Services</p>
-              <h2>How I can help.</h2>
-            </div>
-            <p>
-              Bring me in for a defined problem, embedded delivery capacity, or
-              senior leadership across an initiative.
+            <p className="text-sm text-muted-foreground">
+              Queenstown-based. Working across New Zealand, Australia and
+              worldwide.
             </p>
           </div>
-          <div className="services-grid container">
+          <div className="grid aspect-square place-items-center rounded-4xl bg-muted p-8 text-center text-muted-foreground">
+            <div className="space-y-2">
+              <p>Headshot placeholder</p>
+              <p className="text-sm">Product · Technology · Delivery</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y bg-muted">
+          <div className="container mx-auto grid grid-cols-2 px-4 sm:px-6 md:grid-cols-5">
+            {[
+              ["$20M+", "raised across three rounds"],
+              ["40+", "people in a global team"],
+              ["200K+", "developer community built"],
+              ["0 → revenue", "with a production AI startup"],
+              ["First class", "BEng Software Engineering"],
+            ].map(([stat, label]) => (
+              <div key={stat} className="space-y-1 p-5">
+                <p className="">{stat}</p>
+                <p className="text-sm text-muted-foreground">{label}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <Section
+          id="services"
+          eyebrow="Services"
+          title="Strategy when needed. Delivery always."
+          description="Complex projects rarely fail because nobody can write a strategy deck. They fail in the execution gap. I bridge it by working across product judgement, engineering, delivery and commercial reality."
+        >
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => {
               const Icon = service.icon
               return (
-                <article className="service-card" key={service.number}>
-                  <div className="card-topline">
-                    <span>{service.number}</span>
+                <Card key={service.title}>
+                  <CardHeader>
                     <Icon />
-                  </div>
-                  <h3>{service.title}</h3>
-                  <p>{service.copy}</p>
-                  <ul>
-                    {service.items.map((item) => (
-                      <li key={item}>
-                        <Check />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </article>
+                    <CardTitle>{service.title}</CardTitle>
+                    <CardDescription>{service.copy}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      {service.items.map((item) => (
+                        <li className="flex gap-2" key={item}>
+                          <Check className="size-4 shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
               )
             })}
           </div>
-          <div className="section-cta container">
-            <a className="button button-primary" href="#contact">
+          <div>
+            <LinkButton href="#contact">
               Discuss a project <ArrowRight />
-            </a>
+            </LinkButton>
           </div>
-        </section>
+        </Section>
 
-        <section className="section work-section" id="work">
-          <div className="work-heading container">
-            <p className="section-kicker">Selected work</p>
-            <h2>Built in the real world.</h2>
-            <p>
-              Work across AI products, infrastructure, compliance, regulated
-              delivery and global startups.
-            </p>
-          </div>
-          <div className="project-grid container">
-            {projects.map((project, index) => (
-              <ProjectCard
-                project={project}
-                index={index}
-                key={project.title}
-              />
+        <Section
+          eyebrow="Who I work with"
+          title="Senior capacity for the work that matters most."
+        >
+          <div className="grid gap-4 md:grid-cols-2">
+            {audiences.map(([title, copy]) => (
+              <Card key={title} size="sm">
+                <CardHeader>
+                  <CardTitle>{title}</CardTitle>
+                  <CardDescription>{copy}</CardDescription>
+                </CardHeader>
+              </Card>
             ))}
           </div>
-          <div className="more-work container">
-            <p className="more-work-label">Additional experience</p>
-            <div className="more-work-grid">
-              {moreWork.map(([title, copy]) => (
-                <article key={title}>
-                  <h3>{title}</h3>
-                  <p>{copy}</p>
-                  <ArrowDownRight />
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        </Section>
 
-        <section className="section process-section">
-          <div className="process-layout container">
-            <div>
-              <p className="section-kicker">How I work</p>
-              <h2>
-                Useful output,
-                <br />
-                not more ceremony.
-              </h2>
-            </div>
-            <ol className="process-list">
-              <ProcessStep
-                number="01"
-                title="Define the outcome"
-                copy="Clarify the business objective, users, constraints, risks and what success should look like."
-              />
-              <ProcessStep
-                number="02"
-                title="Reduce the uncertainty"
-                copy="Validate the product direction, technical approach and delivery plan before committing unnecessary time or capital."
-              />
-              <ProcessStep
-                number="03"
-                title="Build in working increments"
-                copy="Deliver usable software and decisions early. Test with real users, then adjust based on evidence."
-              />
-              <ProcessStep
-                number="04"
-                title="Leave the team stronger"
-                copy="Document important decisions, transfer context and build systems the internal team can continue operating."
-              />
-            </ol>
+        <Section
+          id="work"
+          eyebrow="Selected work"
+          title="Built in the real world."
+          description="Work across AI products, infrastructure, compliance, regulated delivery and global startups."
+        >
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {caseStudies.map((study) => (
+              <Card key={study.name}>
+                <CardHeader>
+                  <CardTitle>{study.name}</CardTitle>
+                  <CardDescription>{study.role}</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-sm text-muted-foreground">{study.copy}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {study.tags.map((tag) => (
+                      <Badge key={tag} variant="outline">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="section capabilities-section">
-          <div className="capabilities-layout container">
-            <div>
-              <p className="section-kicker">Capability</p>
-              <h2>Enough range to see the whole problem.</h2>
-              <p>
-                Depth where it counts. A practical way to connect technical
-                decisions with customer, operational and commercial outcomes.
-              </p>
-            </div>
-            <div className="capability-list">
-              {capabilities.map(([title, copy]) => (
-                <article key={title}>
-                  <h3>{title}</h3>
-                  <p>{copy}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section about-section" id="about">
-          <div className="about-grid container">
-            <div className="about-image-wrap">
-              <div className="about-image-placeholder">
-                <span>
-                  Headshot / working image
-                  <br />
-                  placeholder
-                </span>
+        <Section eyebrow="How I work" title="Useful output, not more ceremony.">
+          <div className="grid gap-4 md:grid-cols-2">
+            {[
+              [
+                "01",
+                "Define the outcome",
+                "Clarify the business objective, users, constraints, risks and what success should look like.",
+              ],
+              [
+                "02",
+                "Reduce the uncertainty",
+                "Validate the product direction, technical approach and delivery plan before committing unnecessary time or capital.",
+              ],
+              [
+                "03",
+                "Build in working increments",
+                "Deliver usable software and decisions early. Test with real users, then adjust based on evidence.",
+              ],
+              [
+                "04",
+                "Leave the team stronger",
+                "Document important decisions, transfer context and build systems the internal team can continue operating.",
+              ],
+            ].map(([number, title, copy]) => (
+              <div className="flex gap-4" key={number}>
+                <Badge variant="outline">{number}</Badge>
+                <div>
+                  <h3 className="">{title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{copy}</p>
+                </div>
               </div>
-              <span className="about-note">
-                Software engineer
-                <br />
-                Product leader
-                <br />
-                Founder & operator
-              </span>
+            ))}
+          </div>
+        </Section>
+
+        <Section
+          eyebrow="Capability"
+          title="Enough range to see the whole problem."
+        >
+          <div className="grid gap-6 md:grid-cols-2">
+            {capabilities.map(([title, copy]) => (
+              <div key={title} className="space-y-2">
+                <h3 className="">{title}</h3>
+                <p className="text-sm text-muted-foreground">{copy}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section
+          id="about"
+          eyebrow="About James"
+          title="Software engineer. Product leader. Founder."
+        >
+          <div className="grid gap-10 md:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] md:items-center">
+            <div className="grid aspect-square place-items-center rounded-4xl bg-muted text-center text-muted-foreground">
+              Headshot / working image placeholder
             </div>
-            <div className="about-copy">
-              <p className="section-kicker">About James</p>
-              <h2>
-                Software engineer.
-                <br />
-                Product leader.
-                <br />
-                <em>Founder.</em>
-              </h2>
+            <div className="space-y-4 text-muted-foreground">
               <p>
                 I started as a software engineer and moved into technical
                 product leadership because the hardest problems span these
@@ -514,24 +401,17 @@ function App() {
                 I bring that experience to organisations that need senior
                 judgement and practical execution in the same engagement.
               </p>
-              <a className="text-link" href="#contact">
-                Work with me <MoveRight />
-              </a>
             </div>
           </div>
-        </section>
+        </Section>
 
-        <section className="contact-section" id="contact">
-          <div className="contact-layout container">
-            <div>
-              <p className="section-kicker">Start a conversation</p>
-              <h2>
-                Bring me the
-                <br />
-                <em>messy</em> version.
-              </h2>
+        <section id="contact" className="border-t">
+          <div className="container mx-auto grid gap-8 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-24">
+            <div className="space-y-4">
+              <Badge variant="secondary">Start a conversation</Badge>
+              <h2 className="">Bring me the messy version.</h2>
             </div>
-            <div className="contact-copy">
+            <div className="space-y-4 text-muted-foreground">
               <p>
                 If you have a difficult product, delivery problem or AI
                 opportunity, you do not need to turn it into a polished brief
@@ -542,135 +422,67 @@ function App() {
                 what constraints you are working with. I will tell you directly
                 whether I can help.
               </p>
-              <a className="email-link" href="mailto:james@bayly.xyz">
-                <Mail /> james@bayly.xyz <ArrowRight />
-              </a>
-              <div className="contact-links">
-                <a
-                  href="https://www.linkedin.com/in/james-bayly"
-                  target="_blank"
-                  rel="noreferrer"
+              <div className="flex flex-wrap gap-3">
+                <Button render={<a href="mailto:james@bayly.xyz" />}>
+                  <Mail />
+                  james@bayly.xyz
+                </Button>
+                <Button
+                  variant="outline"
+                  render={
+                    <a
+                      href="https://www.linkedin.com/in/james-bayly"
+                      target="_blank"
+                      rel="noreferrer"
+                    />
+                  }
                 >
-                  <span className="social-mark">in</span> LinkedIn{" "}
-                  <ExternalLink />
-                </a>
-                <a
-                  href="https://github.com/jamesbayly"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="social-mark">gh</span> GitHub{" "}
-                  <ExternalLink />
-                </a>
+                  LinkedIn <ExternalLink />
+                </Button>
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="site-footer">
-        <div className="footer-wrap container">
-          <div className="footer-brand">
-            <span>JAMES BAYLY</span>
-            <small>AI product & technology consultant</small>
-          </div>
+      <footer className="border-t">
+        <div className="container mx-auto flex flex-col gap-2 px-4 py-6 text-sm text-muted-foreground sm:px-6 md:flex-row md:items-center md:justify-between">
+          <p>James Bayly · AI product & technology consultant</p>
           <p>Queenstown, New Zealand · Available worldwide</p>
-          <p>© {new Date().getFullYear()} James Bayly</p>
         </div>
       </footer>
     </div>
   )
 }
 
-function ArrowUpRightIcon() {
-  return <ArrowDownRight className="arrow-up-right" />
-}
-
-function ValueItem({
-  number,
+function Section({
+  id,
+  eyebrow,
   title,
-  copy,
+  description,
+  children,
 }: {
-  number: string
+  id?: string
+  eyebrow: string
   title: string
-  copy: string
+  description?: string
+  children: React.ReactNode
 }) {
   return (
-    <article className="value-item">
-      <span>{number}</span>
-      <h3>{title}</h3>
-      <p>{copy}</p>
-    </article>
-  )
-}
-
-function AudienceItem({
-  number,
-  title,
-  copy,
-}: {
-  number: string
-  title: string
-  copy: string
-}) {
-  return (
-    <article className="audience-item">
-      <span>{number}</span>
-      <div>
-        <h3>{title}</h3>
-        <p>{copy}</p>
-      </div>
-      <ArrowDownRight />
-    </article>
-  )
-}
-
-function ProjectCard({
-  project,
-  index,
-}: {
-  project: (typeof projects)[number]
-  index: number
-}) {
-  return (
-    <article className={`project-card project-${index + 1}`}>
-      <div className="project-art" aria-hidden="true">
-        <span>{String(index + 1).padStart(2, "0")}</span>
-        <div className="project-art-mark">{project.title.slice(0, 1)}</div>
-      </div>
-      <div className="project-content">
-        <p className="project-category">{project.category}</p>
-        <h3>{project.title}</h3>
-        <p className="project-role">{project.role}</p>
-        <p className="project-copy">{project.copy}</p>
-        <div className="tag-list">
-          {project.tags.map((tag) => (
-            <span key={tag}>{tag}</span>
-          ))}
+    <section id={id} className="border-t">
+      <div className="container mx-auto space-y-10 px-4 py-16 sm:px-6 md:py-24">
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="space-y-3">
+            <Badge variant="secondary">{eyebrow}</Badge>
+            <h2 className="">{title}</h2>
+          </div>
+          {description && (
+            <p className="max-w-2xl text-muted-foreground">{description}</p>
+          )}
         </div>
+        <Separator />
+        {children}
       </div>
-    </article>
+    </section>
   )
 }
-
-function ProcessStep({
-  number,
-  title,
-  copy,
-}: {
-  number: string
-  title: string
-  copy: string
-}) {
-  return (
-    <li>
-      <span>{number}</span>
-      <div>
-        <h3>{title}</h3>
-        <p>{copy}</p>
-      </div>
-    </li>
-  )
-}
-
-export default App
