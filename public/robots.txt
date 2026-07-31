@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bayly.xyz/sitemap.xml
+Sitemap: https://bayly.xyz/sitemap-index.xml
