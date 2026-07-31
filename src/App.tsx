@@ -213,10 +213,9 @@ export default function App() {
           <a
             href="#top"
             onClick={closeMenu}
-            className="flex flex-col font-heading text-[0.74rem] leading-[0.94] font-extrabold tracking-[0.11em] no-underline"
+            className="flex flex-col font-heading text-[1.2rem] leading-[0.94] font-extrabold tracking-[0.11em] no-underline"
           >
-            <span>JAMES</span>
-            <span>BAYLY</span>
+            <span>JAMES BAYLY</span>
           </a>
           <button
             type="button"
@@ -293,27 +292,18 @@ export default function App() {
             </div>
             <div className="relative mx-auto min-h-[365px] w-full max-w-[500px] md:min-h-[490px]">
               <div className="absolute top-4 right-0 w-[82%] md:right-[2%] md:w-full md:max-w-[395px]">
-                <div className="relative grid aspect-[.82] place-items-center overflow-hidden bg-linear-to-br from-brand-aqua to-brand-green before:absolute before:inset-[12%] before:rounded-full before:border before:border-white/60 after:absolute after:h-[69%] after:w-[48%] after:rounded-[48%_48%_42%_42%] after:border after:border-white/40">
-                  <span className="relative z-10 text-center font-heading text-xs leading-6 font-bold tracking-[0.08em] text-brand-ink/75 uppercase">
-                    Headshot
-                    <br />
-                    placeholder
-                  </span>
-                  <span className="absolute top-[20%] -left-[35%] aspect-square w-[95%] rounded-full border border-white/40" />
-                  <span className="absolute -right-[45%] -bottom-[28%] aspect-square w-[105%] rounded-full border border-white/40" />
+                <div className="relative grid aspect-[.82] place-items-center overflow-hidden">
+                  <img
+                    src="/headshot.jpg"
+                    alt="James Bayly headshot"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
                 </div>
                 <p className="flex items-center gap-3 py-3 text-xs tracking-[0.05em] text-brand-muted">
                   <strong className="text-brand-deep">01</strong>Product.
                   Technology. Delivery.
                 </p>
               </div>
-              <p className="absolute bottom-[3%] left-[2%] max-w-[180px] font-heading text-xl leading-[1.1] tracking-[-0.045em] md:bottom-[5%] md:-left-[5%] md:max-w-none md:text-3xl">
-                Strategy when needed.
-                <br />
-                <strong className="font-semibold text-brand-deep">
-                  Delivery always.
-                </strong>
-              </p>
             </div>
           </div>
         </section>
@@ -469,11 +459,7 @@ export default function App() {
             })}
           </div>
           <div className={`${container} mt-9`}>
-            <Button
-              variant="secondary"
-              size="lg"
-              render={<a href="#contact" />}
-            >
+            <Button variant="outline" size="lg" render={<a href="#contact" />}>
               Discuss a project <ArrowRight />
             </Button>
           </div>
@@ -500,16 +486,6 @@ export default function App() {
                 key={project.title}
                 className={`${index < 2 ? "md:col-span-6" : index === 4 ? "md:col-span-12 lg:col-span-4" : "md:col-span-6 lg:col-span-4"} overflow-hidden border border-brand-line bg-white`}
               >
-                <div
-                  className={`relative flex h-[185px] items-center justify-center overflow-hidden ${project.color} text-white after:absolute after:h-[80%] after:w-[170%] after:rounded-full after:border after:border-white/25 ${index < 2 ? "md:h-[245px]" : "md:h-[205px]"}`}
-                >
-                  <span className="absolute top-4 left-5 text-xs font-bold tracking-[0.08em]">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <span className="relative z-10 grid size-24 place-items-center rounded-full border border-white/60 font-serif text-6xl italic">
-                    {project.title[0]}
-                  </span>
-                </div>
                 <div className="p-6">
                   <p className="mb-5 text-[0.66rem] font-bold tracking-[0.1em] text-brand-deep uppercase">
                     {project.category}
@@ -652,12 +628,11 @@ export default function App() {
           >
             <div className="relative max-w-[450px]">
               <div className="relative grid aspect-[.88] w-[87%] place-items-center bg-linear-to-br from-brand-aqua to-brand-green text-center text-white">
-                <span className="absolute h-[67%] w-[47%] rounded-[48%_48%_42%_42%] border border-white/45" />
-                <span className="relative z-10 text-xs leading-6 font-bold tracking-[0.1em] uppercase">
-                  Headshot / working image
-                  <br />
-                  placeholder
-                </span>
+                <img
+                  src="/headshot.jpg"
+                  alt="James Bayly headshot"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
               </div>
               <p className="absolute right-0 bottom-[-8%] bg-brand-coral p-5 font-heading text-base leading-[1.12] font-medium tracking-[-0.045em] text-white md:-right-[8%] md:bottom-[9%] md:text-lg">
                 Software engineer
