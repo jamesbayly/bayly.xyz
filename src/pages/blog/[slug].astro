@@ -1,0 +1,97 @@
+---
+import { getCollection, render } from "astro:content"
+import Layout from "@/layouts/main.astro"
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts")
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }))
+}
+
+const { post } = Astro.props
+const { Content } = await render(post)
+
+function getTags(data: { tag?: string | string[]; tags?: string | string[] }): string[] {
+  const raw = data.tags ?? data.tag ?? []
+  return Array.isArray(raw) ? raw : [raw]
+}
+
+const tags = getTags(post.data)
+const date = post.data.date.toLocaleDateString("en-NZ", { year: "numeric", month: "long", day: "numeric" })
+
+const container = "mx-auto w-[min(760px,calc(100%-36px))]"
+const wideContainer = "mx-auto w-[min(1180px,calc(100%-36px))] md:w-[min(1180px,calc(100%-48px))]"
+---
+
+<Layout
+  title={`${post.data.title} – James Bayly`}
+  description={post.data.description}
+  ogImage={post.data.cover}
+>
+  <div class="min-h-svh bg-white text-brand-ink">
+    <!-- Nav -->
+    <header class="border-b border-brand-line bg-white">
+      <div class={`${wideContainer} flex h-[64px] items-center justify-between`}>
+        <a href="/" class="font-heading text-[1.1rem] font-extrabold tracking-[0.11em] no-underline">
+          JAMES BAYLY
+        </a>
+        <nav class="flex items-center gap-6">
+          <a href="/" class="text-sm font-semibold no-underline hover:text-brand-deep">Home</a>
+          <a href="/blog" class="text-sm font-semibold no-underline hover:text-brand-deep">Blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Cover image -->
+    {post.data.cover && (
+      <div class="max-h-[60vh] overflow-hidden">
+        <img
+          src={post.data.cover}
+          alt={post.data.title}
+          class="h-full max-h-[60vh] w-full object-cover"
+        />
+      </div>
+    )}
+
+    <!-- Post header -->
+    <div class={`${container} pt-10 pb-6`}>
+      {tags.length > 0 && (
+        <div class="mb-4 flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <a
+              href={`/blog/tags/${encodeURIComponent(tag.toLowerCase().replace(/\s+/g, "-"))}`}
+              class="bg-brand-aqua-soft px-2.5 py-1 text-[0.62rem] font-bold uppercase tracking-[0.08em] text-brand-deep no-underline hover:bg-brand-aqua"
+            >
+              {tag}
+            </a>
+          ))}
+        </div>
+      )}
+      <h1 class="font-heading text-[clamp(1.9rem,5vw,3.2rem)] font-medium leading-[1.06] tracking-[-0.055em] text-brand-ink">
+        {post.data.title}
+      </h1>
+      <p class="mt-4 text-sm text-brand-muted">{date}</p>
+    </div>
+
+    <!-- Body -->
+    <article class={`${container} pb-20`}>
+      <div class="prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-semibold prose-headings:tracking-[-0.04em] prose-headings:text-brand-ink prose-a:text-brand-deep prose-a:no-underline hover:prose-a:underline prose-img:rounded-sm prose-img:shadow-md prose-strong:text-brand-ink">
+        <Content />
+      </div>
+    </article>
+
+    <!-- Back link -->
+    <div class={`${wideContainer} border-t border-brand-line py-10`}>
+      <a href="/blog" class="text-sm font-semibold text-brand-deep no-underline hover:underline">
+        ← All posts
+      </a>
+    </div>
+
+    <footer class="border-t border-brand-line bg-brand-ink py-6 text-white/65">
+      <div class={`${wideContainer} flex flex-col gap-2 text-sm md:flex-row md:items-center md:justify-between`}>
+        <p><strong class="font-heading text-xs tracking-[0.08em] text-white">JAMES BAYLY</strong> · Perspectives from the road</p>
+        <a href="/blog/rss.xml" class="text-xs text-white/50 no-underline hover:text-white/80">RSS Feed</a>
+        <p>© {new Date().getFullYear()} James Bayly</p>
+      </div>
+    </footer>
+  </div>
+</Layout>
