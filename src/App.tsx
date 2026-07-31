@@ -158,8 +158,8 @@ export default function App() {
   const closeMenu = () => setMenuOpen(false)
 
   return (
-    <div className="min-h-svh bg-white text-[#122838]">
-      <header className="sticky top-0 z-10 border-b border-[#cfdddc] bg-white/95 backdrop-blur">
+    <div className="min-h-svh bg-white text-brand-ink">
+      <header className="sticky top-0 z-10 border-b border-brand-line bg-white/95 backdrop-blur">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6">
           <a href="#top" onClick={closeMenu} className="no-underline">
             James Bayly
@@ -195,16 +195,16 @@ export default function App() {
       </header>
 
       <main id="top">
-        <section className="grid gap-10 bg-[#e8f6f4] px-4 py-16 sm:px-6 md:grid-cols-2 md:items-center md:px-[max(1.5rem,calc((100%-1180px)/2))] md:py-28">
+        <section className="grid gap-10 bg-brand-aqua-soft px-4 py-16 sm:px-6 md:grid-cols-2 md:items-center md:px-[max(1.5rem,calc((100%-1180px)/2))] md:py-28">
           <div className="space-y-6">
             <Badge variant="secondary">
               AI product & technology consultant
             </Badge>
             <div className="space-y-4">
-              <h1 className="font-heading text-5xl leading-[0.96] font-medium tracking-[-0.07em] text-[#122838] sm:text-6xl lg:text-7xl">
+              <h1 className="font-heading text-5xl leading-[0.96] font-medium tracking-[-0.07em] text-brand-ink sm:text-6xl lg:text-7xl">
                 Turn complex ideas into working products.
               </h1>
-              <p className="max-w-2xl text-lg leading-relaxed text-[#395464]">
+              <p className="max-w-2xl text-lg leading-relaxed text-brand-muted">
                 I help founders, product leaders, agencies and regulated
                 organisations solve difficult product and delivery problems,
                 from strategy and architecture through to engineering, launch
@@ -224,7 +224,7 @@ export default function App() {
               worldwide.
             </p>
           </div>
-          <div className="grid aspect-square place-items-center rounded-4xl bg-[#c8ece7] p-8 text-center text-[#395464]">
+          <div className="grid aspect-square place-items-center rounded-4xl bg-brand-aqua p-8 text-center text-brand-muted">
             <div className="space-y-2">
               <p>Headshot placeholder</p>
               <p className="text-sm">Product · Technology · Delivery</p>
@@ -232,7 +232,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="border-y border-[#cfdddc] bg-[#122838] text-white">
+        <section className="border-y border-brand-line bg-brand-ink text-white">
           <div className="container mx-auto grid grid-cols-2 px-4 sm:px-6 md:grid-cols-5">
             {[
               ["$20M+", "raised across three rounds"],
@@ -242,7 +242,7 @@ export default function App() {
               ["First class", "BEng Software Engineering"],
             ].map(([stat, label]) => (
               <div key={stat} className="space-y-1 p-5">
-                <p className="font-heading text-2xl font-medium tracking-[-0.05em] text-[#c8ece7]">
+                <p className="font-heading text-2xl font-medium tracking-[-0.05em] text-brand-aqua">
                   {stat}
                 </p>
                 <p className="text-sm text-white/65">{label}</p>
@@ -290,7 +290,7 @@ export default function App() {
         </Section>
 
         <Section
-          className="bg-[#f6f4ee]"
+          className="bg-brand-cream"
           eyebrow="Who I work with"
           title="Senior capacity for the work that matters most."
         >
@@ -307,7 +307,7 @@ export default function App() {
         </Section>
 
         <Section
-          className="bg-[#f9faf8]"
+          className="bg-brand-surface"
           id="work"
           eyebrow="Selected work"
           title="Built in the real world."
@@ -336,7 +336,7 @@ export default function App() {
         </Section>
 
         <Section
-          className="bg-[#e8f6f4]"
+          className="bg-brand-aqua-soft"
           eyebrow="How I work"
           title="Useful output, not more ceremony."
         >
@@ -366,7 +366,7 @@ export default function App() {
               <div className="flex gap-4" key={number}>
                 <Badge variant="outline">{number}</Badge>
                 <div>
-                  <h3 className="font-heading text-xl font-medium tracking-[-0.04em] text-[#122838]">
+                  <h3 className="font-heading text-xl font-medium tracking-[-0.04em] text-brand-ink">
                     {title}
                   </h3>
                   <p className="mt-2 text-sm text-muted-foreground">{copy}</p>
@@ -384,7 +384,7 @@ export default function App() {
           <div className="grid gap-6 md:grid-cols-2">
             {capabilities.map(([title, copy]) => (
               <div key={title} className="space-y-2">
-                <h3 className="font-heading text-xl font-medium tracking-[-0.04em] text-[#122838]">
+                <h3 className="font-heading text-xl font-medium tracking-[-0.04em] text-brand-ink">
                   {title}
                 </h3>
                 <p className="text-sm text-muted-foreground">{copy}</p>
@@ -394,13 +394,13 @@ export default function App() {
         </Section>
 
         <Section
-          className="bg-[#f6f4ee]"
+          className="bg-brand-cream"
           id="about"
           eyebrow="About James"
           title="Software engineer. Product leader. Founder."
         >
           <div className="grid gap-10 md:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] md:items-center">
-            <div className="grid aspect-square place-items-center rounded-4xl bg-[#c8ece7] text-center text-[#395464]">
+            <div className="grid aspect-square place-items-center rounded-4xl bg-brand-aqua text-center text-brand-muted">
               Headshot / working image placeholder
             </div>
             <div className="space-y-4 text-white/80">
@@ -424,7 +424,7 @@ export default function App() {
 
         <section
           id="contact"
-          className="border-t border-[#0d5e7a] bg-[#0d5e7a] text-white"
+          className="border-t border-brand-deep bg-brand-deep text-white"
         >
           <div className="container mx-auto grid gap-8 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-24">
             <div className="space-y-4">
@@ -467,7 +467,7 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="border-t border-[#122838] bg-[#122838] text-white/65">
+      <footer className="border-t border-brand-ink bg-brand-ink text-white/65">
         <div className="container mx-auto flex flex-col gap-2 px-4 py-6 text-sm sm:px-6 md:flex-row md:items-center md:justify-between">
           <p>James Bayly · AI product & technology consultant</p>
           <p>Queenstown, New Zealand · Available worldwide</p>
@@ -493,12 +493,12 @@ function Section({
   children: React.ReactNode
 }) {
   return (
-    <section id={id} className={`border-t border-[#cfdddc] ${className}`}>
+    <section id={id} className={`border-t border-brand-line ${className}`}>
       <div className="container mx-auto space-y-10 px-4 py-16 sm:px-6 md:py-24">
         <div className="grid gap-4 md:grid-cols-2">
           <div className="space-y-3">
             <Badge variant="secondary">{eyebrow}</Badge>
-            <h2 className="font-heading text-3xl leading-[1.01] font-medium tracking-[-0.06em] text-[#122838] sm:text-4xl">
+            <h2 className="font-heading text-3xl leading-[1.01] font-medium tracking-[-0.06em] text-brand-ink sm:text-4xl">
               {title}
             </h2>
           </div>
