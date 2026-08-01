@@ -8,13 +8,14 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props
-const { Content } = await render(post)
+const { Content, headings } = await render(post)
 
 function getTags(data: { tag?: string | string[]; tags?: string | string[] }): string[] {
   const raw = data.tags ?? data.tag ?? []
   return Array.isArray(raw) ? raw : [raw]
 }
 
+const hasTOCs = post.data.toc;
 const tags = getTags(post.data)
 const date = post.data.date.toLocaleDateString("en-NZ", { year: "numeric", month: "long", day: "numeric" })
 
@@ -71,6 +72,22 @@ const wideContainer = "mx-auto w-[min(1180px,calc(100%-36px))] md:w-[min(1180px,
       </h1>
       <p class="mt-4 text-sm text-brand-muted">{date}</p>
     </div>
+
+    <!-- Table of Contents -->
+    {hasTOCs && headings.length > 0 && (
+      <div class={`${container} pb-20`}>
+        <nav class="toc">
+          <ul>
+            {headings.map((h) => (
+              <li style={`margin-left: ${(h.depth - 2) * 1}rem`}>
+                <a href={`#${h.slug}`}>{h.text}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    )}
+
 
     <!-- Body -->
     <article class={`${container} pb-20`}>
