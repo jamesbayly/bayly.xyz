@@ -1,7 +1,7 @@
 ---
 title: "Uzbekistan - Khiva, slave town, far, far, away"
 cover: https://photos.smugmug.com/Uzbekistan/i-QJTzfk8/1/LdZrTT6rGgX24HD6P83Cknk7bbW3g2bZQCNQtgm57/X3/DSC00932-X3.jpg
-date: 2026-07-28
+date: 2026-08-25
 toc: false
 tag:
   - Uzbekistan

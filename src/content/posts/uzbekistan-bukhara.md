@@ -1,7 +1,7 @@
 ---
 title: "Uzbekistan - Bukhara, edge of the dry desert"
 cover: https://photos.smugmug.com/Uzbekistan/i-CfX9ZSS/1/MmLQHmdLbRJDGcwjFs39NtGT8bN3KjHszztGtXT4f/X3/DSC00765-X3.jpg
-date: 2026-07-28
+date: 2026-08-10
 toc: false
 tag:
   - Uzbekistan
