@@ -180,3 +180,24 @@
     }
   }
 }
+
+/* Scroll reveal animations for page sections */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(36px);
+}
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 800ms cubic-bezier(.2, .9, .2, 1), transform 800ms cubic-bezier(.2, .9, .2, 1);
+  will-change: opacity, transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-hidden,
+  .reveal {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
