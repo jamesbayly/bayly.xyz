@@ -1,0 +1,533 @@
+---
+import Layout from "@/layouts/main.astro"
+import Header from "@/components/Header"
+import ButtonLink from "@/components/ButtonLink"
+import {
+  ArrowDownRight,
+  ArrowRight,
+  Check,
+  CircleAlert,
+  Database,
+  Gauge,
+  ShieldCheck,
+  Waypoints,
+} from "lucide-react"
+
+const container =
+  "mx-auto w-[min(1180px,calc(100%-36px))] md:w-[min(1180px,calc(100%-48px))]"
+const sectionKicker =
+  "mb-6 text-[0.69rem] font-bold uppercase tracking-[0.13em] text-brand-deep"
+const sectionHeading =
+  "font-heading text-[clamp(2.3rem,4.5vw,4.35rem)] leading-[1.01] font-medium tracking-[-0.07em] text-brand-ink"
+
+const sprintOutputs = [
+  "A regression suite drawn from your actual production workload",
+  "Agreed quality, safety and critical-failure acceptance criteria",
+  "A baseline for your current model and configuration",
+  "A scorecard for two to four candidate models across quality, latency, reliability and projected cost",
+  "Estimated monthly and annual economics at your current volume",
+  "A decision to migrate, wait, or make no change, with its evidence and exceptions",
+  "A practical migration, rollback and post-release monitoring checklist",
+]
+
+const process = [
+  [
+    "01",
+    "Connect",
+    "Provide 7 to 30 days of representative traces, or an exported sample, alongside the current model, prompts, retrieval and tool configuration.",
+  ],
+  [
+    "02",
+    "Baseline",
+    "Run the production configuration first. Establish how the system behaves before judging a proposed change.",
+  ],
+  [
+    "03",
+    "Build the suite",
+    "Cluster production requests, select representative, edge, historical-failure and adversarial cases, then define measurable acceptance criteria together.",
+  ],
+  [
+    "04",
+    "Evaluate",
+    "Run two to four candidates through the same suite using deterministic checks, calibrated model-based judges and targeted human review.",
+  ],
+  [
+    "05",
+    "Compare",
+    "Inspect quality, critical failures, latency, reliability and cost. A critical failure cannot be hidden by a good average score.",
+  ],
+  [
+    "06",
+    "Decide",
+    "Receive a decision-ready recommendation, migration plan and thresholds for validating the approved change in production.",
+  ],
+]
+
+const principles = [
+  [
+    "A decision, not a dashboard",
+    "The output is evidence for a specific engineering decision: ship, do not ship, or ship with defined exceptions.",
+  ],
+  [
+    "Real workload, not a generic benchmark",
+    "The suite starts from the requests, failures and business rules that matter to your team.",
+  ],
+  [
+    "Human accountability stays in the loop",
+    "The system can recommend and record. The people accountable for the workload approve the change.",
+  ],
+  [
+    "Compatible with your stack",
+    "Use exported traces, OpenTelemetry, existing observability platforms or a gateway. No wholesale replacement is required.",
+  ],
+]
+
+const futureCapabilities = [
+  [
+    "Living assurance corpus",
+    "Convert approved, anonymised production observations into a maintained test corpus. Administrators can inspect, edit, approve or retire every case.",
+  ],
+  [
+    "Every material change",
+    "Extend from models to prompts, retrieval, tools, application code, provider changes and changed input populations.",
+  ],
+  [
+    "Continuous evidence",
+    "Connect evaluation history, approvals, exceptions and post-release behaviour so the next change takes hours to assess, not weeks.",
+  ],
+]
+---
+
+<Layout
+  title="AI Change Assurance | James Bayly"
+  description="AI Change Assurance helps teams prove whether a production AI workload can move to a better or cheaper model without breaking the business."
+  canonical="https://bayly.xyz/ai-change-assurance/"
+  robots="noindex, nofollow, noarchive"
+>
+  <div class="min-h-svh overflow-hidden bg-white text-brand-ink">
+    <Header client:load />
+
+    <main id="top">
+      <section
+        class="relative overflow-hidden bg-brand-aqua-soft pt-[132px] pb-20 md:pt-[170px] md:pb-28"
+      >
+        <div
+          class="absolute top-[-18%] right-[-12%] aspect-square w-[57%] rounded-full border border-brand-deep/20"
+        >
+        </div>
+        <div
+          class="absolute right-[9%] bottom-[-41%] aspect-square w-[42%] rounded-full border border-brand-deep/20"
+        >
+        </div>
+        <div
+          class={`${container} relative z-10 grid items-end gap-12 md:grid-cols-[1.15fr_.85fr] md:gap-16`}
+        >
+          <div class="max-w-[780px]">
+            <p
+              class="mb-6 flex items-center gap-2.5 text-[0.69rem] font-bold tracking-[0.13em] text-brand-deep uppercase"
+            >
+              <span class="h-px w-6 bg-brand-deep"></span>
+              Exploring a design-partner product
+            </p>
+            <h1
+              class="mb-7 font-heading text-[clamp(3rem,8vw,6.3rem)] leading-[0.94] font-medium tracking-[-0.078em] text-brand-ink"
+            >
+              Change your AI without <em
+                class="font-serif font-normal text-brand-deep">breaking</em
+              > the business.
+            </h1>
+            <p
+              class="max-w-[650px] text-[1.04rem] leading-relaxed text-brand-muted md:text-[1.18rem]"
+            >
+              AI Change Assurance turns a production workload into a living
+              regression suite, evaluates a proposed model change against your
+              business requirements, and gives you the evidence to ship, wait,
+              or make no change.
+            </p>
+            <div
+              class="mt-9 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-7"
+            >
+              <ButtonLink href="#conversation" size="lg">
+                Talk through a workload <ArrowRight className="size-4" />
+              </ButtonLink>
+              <a
+                href="#phase-one"
+                class="inline-flex items-center gap-2 text-sm font-bold no-underline hover:text-brand-deep"
+              >
+                See the first engagement <ArrowDownRight className="size-4" />
+              </a>
+            </div>
+          </div>
+
+          <aside
+            class="border border-brand-deep/20 bg-white/85 p-6 shadow-[0_16px_45px_rgba(13,94,122,0.08)] backdrop-blur-sm md:p-8"
+          >
+            <p
+              class="mb-8 text-[0.68rem] font-bold tracking-[0.13em] text-brand-deep uppercase"
+            >
+              The question it answers
+            </p>
+            <p
+              class="font-heading text-[clamp(1.65rem,3vw,2.3rem)] leading-[1.05] font-medium tracking-[-0.055em]"
+            >
+              Can we move this production AI workload to a better or cheaper
+              model safely?
+            </p>
+            <div class="mt-8 border-t border-brand-line pt-5">
+              <p class="text-sm leading-relaxed text-brand-muted">
+                Not an observability dashboard. Not a model router. A decision
+                process that connects quality, risk, reliability and economics
+                before production changes.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="bg-brand-ink py-12 text-white md:py-16">
+        <div class={`${container} grid gap-7 md:grid-cols-3 md:gap-12`}>
+          <div>
+            <p
+              class="font-heading text-3xl font-medium tracking-[-0.065em] text-brand-aqua"
+            >
+              One workload
+            </p>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">
+              Start where model spend, operational risk and a near-term decision
+              are real.
+            </p>
+          </div>
+          <div>
+            <p
+              class="font-heading text-3xl font-medium tracking-[-0.065em] text-brand-aqua"
+            >
+              2 to 4 candidates
+            </p>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">
+              Compare the current configuration and credible alternatives under
+              identical conditions.
+            </p>
+          </div>
+          <div>
+            <p
+              class="font-heading text-3xl font-medium tracking-[-0.065em] text-brand-aqua"
+            >
+              10 business days
+            </p>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">
+              Target delivery once usable data access and technical context are
+              available.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="phase-one" class="py-20 md:py-32">
+        <div
+          class={`${container} grid gap-10 md:grid-cols-[.75fr_1.25fr] md:gap-24`}
+        >
+          <div>
+            <p class={sectionKicker}>Phase 1</p>
+            <h2 class={sectionHeading}>A Model Assurance Sprint.</h2>
+          </div>
+          <div class="max-w-[700px]">
+            <p class="text-lg leading-relaxed text-brand-muted">
+              A fixed-scope, service-assisted assessment for one production AI
+              workload. We assess a model, provider or prompt change and
+              quantify the likely benefit before you switch.
+            </p>
+            <p class="mt-5 text-lg leading-relaxed text-brand-muted">
+              The engagement can say <strong class="text-brand-ink"
+                >do not change</strong
+              >. That is a valuable answer when a technically attractive
+              migration would quietly damage customer experience, operational
+              performance or revenue.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class={`${container} mt-12 grid border-t border-l border-brand-line md:mt-20 md:grid-cols-2`}
+        >
+          {
+            sprintOutputs.map((output, index) => (
+              <article class="flex min-h-[118px] items-start gap-4 border-r border-b border-brand-line p-5 md:min-h-[135px] md:p-7">
+                <span class="pt-0.5 text-xs font-bold text-brand-deep">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <p class="max-w-[430px] text-sm leading-relaxed text-brand-muted">
+                  {output}
+                </p>
+              </article>
+            ))
+          }
+        </div>
+
+        <div
+          class={`${container} mt-8 flex flex-col gap-5 border-l-4 border-brand-coral bg-brand-cream px-6 py-5 md:mt-10 md:flex-row md:items-center md:justify-between`}
+        >
+          <p class="max-w-[760px] text-sm leading-relaxed text-brand-muted">
+            <strong class="text-brand-ink">Good fit:</strong> a customer-facing or
+            business-critical AI workflow with meaningful production volume, a likely
+            change in the next 90 days, and a team that can identify both an engineering
+            and business owner.
+          </p>
+          <p class="shrink-0 text-sm font-bold text-brand-deep">
+            From US$7,500
+          </p>
+        </div>
+      </section>
+
+      <section class="bg-brand-cream py-20 md:py-32">
+        <div
+          class={`${container} grid gap-10 md:grid-cols-[.8fr_1.2fr] md:gap-24`}
+        >
+          <div>
+            <p class={sectionKicker}>How it works</p>
+            <h2 class={sectionHeading}>Evidence before the change.</h2>
+            <p
+              class="mt-6 max-w-[380px] text-base leading-relaxed text-brand-muted"
+            >
+              The work is designed to answer three questions clearly: can we
+              change this system safely, what evidence supports the decision,
+              and did the released system behave as expected?
+            </p>
+          </div>
+          <ol class="border-t border-brand-line">
+            {
+              process.map(([number, title, copy]) => (
+                <li class="grid grid-cols-[42px_1fr] gap-4 border-b border-brand-line py-6 md:grid-cols-[70px_1fr] md:gap-6">
+                  <span class="text-xs font-bold text-brand-deep">
+                    {number}
+                  </span>
+                  <div>
+                    <h3 class="mb-2 font-heading text-xl font-semibold tracking-[-0.045em]">
+                      {title}
+                    </h3>
+                    <p class="max-w-[610px] text-sm leading-relaxed text-brand-muted">
+                      {copy}
+                    </p>
+                  </div>
+                </li>
+              ))
+            }
+          </ol>
+        </div>
+      </section>
+
+      <section class="bg-brand-deep py-20 text-white md:py-32">
+        <div
+          class={`${container} grid gap-9 md:grid-cols-[.78fr_1.22fr] md:gap-24`}
+        >
+          <div>
+            <p
+              class="mb-6 text-[0.69rem] font-bold tracking-[0.13em] text-brand-aqua uppercase"
+            >
+              Why it is credible
+            </p>
+            <h2
+              class="font-heading text-[clamp(2.3rem,4.5vw,4.35rem)] leading-[1.01] font-medium tracking-[-0.07em]"
+            >
+              The evaluation should be as rigorous as the decision.
+            </h2>
+          </div>
+          <div class="grid border-t border-l border-white/20 sm:grid-cols-2">
+            {
+              principles.map(([title, copy], index) => (
+                <article class="min-h-[220px] border-r border-b border-white/20 p-6 md:min-h-[250px]">
+                  {index === 0 && <Gauge className="size-5 text-brand-aqua" />}
+                  {index === 1 && (
+                    <Database className="size-5 text-brand-aqua" />
+                  )}
+                  {index === 2 && (
+                    <ShieldCheck className="size-5 text-brand-aqua" />
+                  )}
+                  {index === 3 && (
+                    <Waypoints className="size-5 text-brand-aqua" />
+                  )}
+                  <h3 class="mt-10 mb-3 font-heading text-xl font-medium tracking-[-0.05em]">
+                    {title}
+                  </h3>
+                  <p class="text-sm leading-relaxed text-white/70">{copy}</p>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 md:py-32">
+        <div
+          class={`${container} grid gap-10 md:grid-cols-[.75fr_1.25fr] md:gap-24`}
+        >
+          <div>
+            <p class={sectionKicker}>Where it can lead</p>
+            <h2 class={sectionHeading}>
+              A living acceptance suite for every material change.
+            </h2>
+          </div>
+          <div class="max-w-[700px]">
+            <p class="text-lg leading-relaxed text-brand-muted">
+              The first engagement proves one model change. The longer-term
+              outcome is a maintained, customer-specific assurance asset that
+              makes every future change faster and more accountable.
+            </p>
+            <p class="mt-5 text-base leading-relaxed text-brand-muted">
+              Production observations can become anonymised, versioned candidate
+              test cases. They are never accepted as truth by default. An
+              authorised administrator can inspect, edit, approve or reject the
+              expected behaviour and the test rules behind each case.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class={`${container} mt-12 grid border-t border-l border-brand-line md:mt-20 md:grid-cols-3`}
+        >
+          {
+            futureCapabilities.map(([title, copy], index) => (
+              <article class="min-h-[245px] border-r border-b border-brand-line p-6 md:min-h-[285px]">
+                <span class="text-xs font-bold text-brand-deep">
+                  0{index + 1}
+                </span>
+                <h3 class="mt-12 mb-4 font-heading text-xl font-semibold tracking-[-0.05em]">
+                  {title}
+                </h3>
+                <p class="text-sm leading-relaxed text-brand-muted">{copy}</p>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="bg-brand-surface py-20 md:py-28">
+        <div
+          class={`${container} grid gap-10 md:grid-cols-[.78fr_1.22fr] md:gap-24`}
+        >
+          <div>
+            <p class={sectionKicker}>The technical shape</p>
+            <h2 class={sectionHeading}>Observe at the boundary you control.</h2>
+          </div>
+          <div>
+            <p class="max-w-[700px] text-lg leading-relaxed text-brand-muted">
+              The durable source of truth is usually the application or gateway
+              boundary, not a provider dashboard. It is the place that can
+              connect the actual request, context, tool activity, final
+              response, user feedback and business outcome.
+            </p>
+            <div class="mt-8 grid gap-3 sm:grid-cols-2">
+              <div class="border border-brand-line bg-white p-5">
+                <p
+                  class="mb-3 text-xs font-bold tracking-[0.11em] text-brand-deep uppercase"
+                >
+                  Capture
+                </p>
+                <p class="text-sm leading-relaxed text-brand-muted">
+                  SDK or middleware, a controlled gateway, OpenTelemetry,
+                  existing observability traces, or a customer export.
+                </p>
+              </div>
+              <div class="border border-brand-line bg-white p-5">
+                <p
+                  class="mb-3 text-xs font-bold tracking-[0.11em] text-brand-deep uppercase"
+                >
+                  Protect
+                </p>
+                <p class="text-sm leading-relaxed text-brand-muted">
+                  Customer-side redaction, configurable retention, metadata-only
+                  modes, tenant isolation and the option to retain content in
+                  the customer environment.
+                </p>
+              </div>
+            </div>
+            <p class="mt-6 text-sm leading-relaxed text-brand-muted">
+              Provider APIs can help with reconciliation, metadata and supported
+              backfill. They are not a consistent, cross-provider record of all
+              historical prompts and outputs. The design should work with
+              OpenAI, Anthropic, OpenRouter and existing tooling without making
+              their log-retention choices your data strategy.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-brand-aqua-soft py-20 md:py-32">
+        <div
+          class={`${container} grid gap-10 md:grid-cols-[.8fr_1.2fr] md:gap-24`}
+        >
+          <div>
+            <p class={sectionKicker}>Claims discipline</p>
+            <h2 class={sectionHeading}>
+              Useful evidence, not a compliance shortcut.
+            </h2>
+          </div>
+          <div class="border-t border-brand-line">
+            <div
+              class="grid grid-cols-[28px_1fr] gap-4 border-b border-brand-line py-6"
+            >
+              <CircleAlert className="mt-0.5 size-4 text-brand-deep" />
+              <p class="text-sm leading-relaxed text-brand-muted">
+                The product can produce operational evidence that supports
+                applicable monitoring, logging and change-assurance processes.
+                It does not make an AI system automatically compliant with the
+                EU AI Act, NIST AI RMF or ISO/IEC 42001.
+              </p>
+            </div>
+            <div
+              class="grid grid-cols-[28px_1fr] gap-4 border-b border-brand-line py-6"
+            >
+              <Check className="mt-0.5 size-4 text-brand-deep" />
+              <p class="text-sm leading-relaxed text-brand-muted">
+                It is not a general-purpose LLM observability platform, a model
+                gateway, a GRC suite or a substitute for accountable owners,
+                legal advice and domain expertise.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="conversation"
+        class="bg-brand-deep py-20 text-white md:py-32"
+      >
+        <div
+          class={`${container} grid gap-10 md:grid-cols-[.8fr_1.2fr] md:gap-24`}
+        >
+          <div>
+            <p
+              class="mb-6 text-[0.69rem] font-bold tracking-[0.13em] text-brand-aqua uppercase"
+            >
+              Design partners
+            </p>
+            <h2
+              class="font-heading text-[clamp(2.3rem,4.5vw,4.35rem)] leading-[1.01] font-medium tracking-[-0.07em]"
+            >
+              Have a model change you do not want to guess at?
+            </h2>
+          </div>
+          <div class="max-w-[680px]">
+            <p class="text-base leading-relaxed text-white/80">
+              I am looking to speak with technical founders and CTOs running
+              production AI workloads who expect to evaluate a model, provider,
+              prompt or retrieval change in the next 90 days.
+            </p>
+            <p class="mt-4 text-base leading-relaxed text-white/80">
+              Bring a rough picture of the workload, current model spend, the
+              change you are considering, and what a bad migration would cost. I
+              will tell you plainly whether a Model Assurance Sprint looks
+              worthwhile.
+            </p>
+            <a
+              href="mailto:james@bayly.xyz?subject=AI%20Change%20Assurance"
+              class="mt-9 flex items-center justify-between gap-5 border-b border-white/35 py-5 font-heading text-[clamp(1.25rem,2.4vw,2rem)] font-medium tracking-[-0.055em] text-brand-aqua no-underline"
+            >
+              <span>james@bayly.xyz</span>
+              <ArrowRight className="size-5 shrink-0" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</Layout>

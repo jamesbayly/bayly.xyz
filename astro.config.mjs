@@ -40,7 +40,12 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [react(), sitemap()],
+  integrations: [
+    react(),
+    sitemap({
+      filter: (page) => page !== "https://bayly.xyz/ai-change-assurance/",
+    }),
+  ],
   markdown: {
     processor: satteri({
       hastPlugins: [imageFigure],
