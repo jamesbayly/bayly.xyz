@@ -105,7 +105,7 @@ AI customer service platform. Multi-agent LLM pipeline for customer service auto
 
 **Role:** CTO — full ownership of product, engineering, and operations. Build, train, and integrate various AI models to provide turnkey customer support. Automations to continually fine tune AI based on observed customer support interactions. Data preprocessing for RAG training using OpenAI libraries. Optimise AI to correctly cite answers from supplied RAG to provide useful links back to the end user. Full-stack architecture and development (React, TypeScript, Node). AI pipeline design (multi-agent orchestration, RAG architecture, prompt engineering, self-reinforcement learning). Product management (feature prioritisation, roadmap, delivery). Operations (deployment, monitoring, production support). Customer conversations and sales.
 
-**Stage:** Entrepreneur First accelerator (London, 2024). Cashflow positive — generating revenue with a lean team. Growing customer base across NZ, AU, Asia, and UK.
+**Outcome:** Selected for Entrepreneur First's London programme in 2024. Built from zero to revenue with customers across NZ, Australia, Asia, and the UK, and reached positive cashflow with a lean team. The company was formally wound down in 2026 after the founders concluded that the customer-service agent market had become crowded and the product lacked sufficient differentiation to justify continuing.
 
 **Key outcomes:**
 
