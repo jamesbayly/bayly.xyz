@@ -7,7 +7,7 @@ tag:
   - Azerbaijan
 ---
 
-The Caspian doesn't look like a glittering inland sea. It is dirty, flat, gray-green, stretching out past the horizon. As your plane descends from the haze of clouds and Baku appears below, you first see the skyline: three glass towers shaped like flames, standing over a curved bay promenade that could pass for the Riviera if you squinted and forgot which continent you were on. Yesterday I was drinking dust in Uzbekistan, walking in mud-brick towns; now there's a boulevard, glass skyscrapers, money.
+The Caspian doesn't look like a glittering inland sea. It is dirty, flat, gray-green, stretching out past the horizon. As your plane descends from the haze of clouds and Baku appears below, you first see the skyline: three glass towers shaped like flames, standing over a curved bay promenade that could pass for the Riviera if you forgot which continent you were on. Yesterday I was drinking dust in Uzbekistan, walking in mud-brick towns; now there's a boulevard, glass skyscrapers, money.
 
 ![Flame Towers dominate Baku's skyline](https://photos.smugmug.com/Azerbaijan/i-ScZv5ND/0/NXL4B632zNg6xMJbTtrFfn7gpnfBrNNGRtbScQMmB/X3/DSC03414-X3.jpg)
 
@@ -19,9 +19,9 @@ Marco Polo passed through this stretch of the world and wrote about a spring nea
 
 By the 1840s men were sinking the first deliberate wells here, years before Titusville, Pennsylvania falsely claimed the honor of inventing the modern oil industry. Even the Nobels got involved, funding the prize that holds their name from the black gold extracted here. Around the turn of the last century, this small city on the Caspian coastline was the gravitational centre of the global oil trade - outproducing the United States.
 
-The reason Hitler's Wehrmacht abruptly turned east and drove deep into Russia in the summer of 1942 was for it. An entire military campaign, built around an insatiable desire for the oil from this specific patch of ground. The oil didn't just fund the war. For one summer, it _was_ the war.
+This oil is the reason Hitler's Wehrmacht abruptly turned east and drove deep into Russia in the summer of 1942. An entire military campaign, built around an insatiable desire for the oil from this specific patch of ground. The oil didn't just fund the war. For one summer, it _was_ the war.
 
-The country is dotted with mud volcanoes — small cones of grey sludge that gurgle and belch. Azerbaijan just happens to sit on so much oil and natural gas that it simply gurgles up through cracks in the earth. Sometimes it finishes in a natural flame in the rocks that remains lit for decades.
+The country is dotted with mud volcanoes - small cones of grey sludge that gurgle and pop. Azerbaijan just happens to sit on so much oil and natural gas that it simply seeps up through cracks in the earth. Sometimes it finishes in a natural flame in the rocks that remains lit for decades.
 
 ![Mud volcanoes](https://photos.smugmug.com/Azerbaijan/i-BJL37LW/0/MXZ4RcJWJWQBxtfc9bLN3ZjLjvxFzfFxkKNrKrKgn/X3/DSC03505-X3.jpg)
 
@@ -29,11 +29,11 @@ The country is dotted with mud volcanoes — small cones of grey sludge that gur
 
 ![Yanar Dağ, a hillside north of the city that has simply been on fire for as long as anyone can date](https://photos.smugmug.com/Azerbaijan/i-F5zdkBj/0/KV7MwPBQrJGp94zGfdTTnmtMcBc6qtf9rHnQ3mG2Z/X3/DSC03532-X3.jpg)
 
-Back in the capital, this history is a financial statement. Downtown Baku looks less like the Caucasus than like somewhere in northern Europe would build if it had unlimited cash - glass towers, luxury stores in marble promenades, late-model SUVs. Something like a third to half of the country's economy still runs on oil and gas.
+Back in the capital, this history is a financial statement. Downtown Baku looks like something northern Europe would build if it had unlimited cash - glass towers, luxury stores in marble promenades, late-model SUVs. Between a third to half of the country's economy still runs on oil and gas.
 
 ![Looks like a European capital](https://photos.smugmug.com/Azerbaijan/i-WdqChTR/0/Mfgq27PD59rQNcbjGDDsgnHnzrrWtpQ79cTZ67kCG/X3/DSC03406-X3.jpg)
 
-The Aliyev family has run Azerbaijan for three decades now, father to son, spending the money stereotypically spent by strongmen on a rebuilt capital, a tightly managed press, and enough military hardware to keep things hot with its neighbours. Relations with Armenia and Georgia remain frozen under a dubious ceasefire, and Azerbaijan is an interesting oddity of a country with no open land-border crossings. Every capital built this fast on this much oil money goes the same way: a Formula 1 street circuit gets laid down once a year as one more excuse to prove the country belongs on a certain kind of list, and the arrangement holds for exactly as long as the oil does.
+The Aliyev family has run Azerbaijan for three decades now, father to son, strongment spending money stereotypically on a rebuilt capital, a tightly managed press, and enough military hardware to keep things hot with its neighbours. Relations with Armenia and Georgia remain frozen under a dubious ceasefire, and Azerbaijan is an interesting oddity of a country with no open land-border crossings. Every capital built this fast on this much oil money goes the same way: a Formula 1 street circuit gets laid down once a year as one more excuse to prove the country belongs on a certain kind of list, and the arrangement holds for exactly as long as the oil does.
 
 ![Gleaming new developments](https://photos.smugmug.com/Azerbaijan/i-XfmM5nz/0/NVRG8mXPprzjGrK5bcmnVx3MnhBLBwjsGwtX2kkGz/X3/DSC03536-X3.jpg)
 
