@@ -1,6 +1,6 @@
 ---
 title: "Azerbaijan - A Country Shaped by Oil"
-cover: https://photos.smugmug.com/Uzbekistan/i-QJTzfk8/1/LdZrTT6rGgX24HD6P83Cknk7bbW3g2bZQCNQtgm57/X3/DSC00932-X3.jpg
+cover: https://photos.smugmug.com/Azerbaijan/i-J3fdGht/0/LjS9ws9Gvv8q8QGr787BWCTp8zVKVLnrpmvnGs58j/X3/DSC03421-X3.jpg
 date: 2026-08-30
 toc: false
 tag:
