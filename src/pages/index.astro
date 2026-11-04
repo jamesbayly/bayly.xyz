@@ -115,13 +115,6 @@ const capabilities = [
   ["AI advisory & governance", "Opportunity assessment, operating models, human oversight, procurement controls and practical implementation roadmaps."],
 ]
 
-const howIWork = [
-  ["01", "Define the outcome", "Clarify the business objective, users, constraints, risks and what success should look like."],
-  ["02", "Reduce the uncertainty", "Validate the product direction, technical approach and delivery plan before committing unnecessary time or capital."],
-  ["03", "Build in working increments", "Deliver usable software and decisions early. Test with real users, then adjust based on evidence."],
-  ["04", "Leave the team stronger", "Document important decisions, transfer context and build systems the internal team can continue operating."],
-]
-
 const stats = [
   ["$20M+", "raised across three rounds"],
   ["40+", "people in a global team"],
@@ -246,7 +239,7 @@ const stats = [
             <h2 class="font-heading text-[clamp(2.3rem,4.5vw,4.35rem)] leading-[1.01] font-medium tracking-[-0.07em]">How I can help.</h2>
           </div>
           <p class="max-w-[340px] text-base leading-relaxed text-white/70">
-            Bring me in for a defined AI product, embedded engineering capacity, hands-on technical leadership, or focused AI advisory.
+            Bring me in for a defined AI product, focussed AI advisory, embedded engineering capacity, or hands-on technical leadership.
           </p>
         </div>
         <div class={`${container} grid border-t border-l border-white/25 sm:grid-cols-2 lg:grid-cols-4`}>
@@ -345,27 +338,6 @@ const stats = [
         </div>
       </section>
 
-      <!-- How I work -->
-      <section class="bg-brand-aqua-soft py-20 md:py-32">
-        <div class={`${container} grid gap-10 md:grid-cols-[.8fr_1.2fr] md:gap-25`}>
-          <div>
-            <p class={sectionKicker}>How I work</p>
-            <h2 class={sectionHeading}>Useful output,<br />not more ceremony.</h2>
-          </div>
-          <ol class="border-t border-brand-line">
-            {howIWork.map(([number, title, copy]) => (
-              <li class="grid grid-cols-[40px_1fr] gap-4 border-b border-brand-line py-6 md:grid-cols-[70px_1fr]">
-                <span class="text-xs font-bold text-brand-deep">{number}</span>
-                <div>
-                  <h3 class="mb-2 font-heading text-xl font-semibold tracking-[-0.045em]">{title}</h3>
-                  <p class="max-w-[510px] text-sm leading-relaxed text-brand-muted">{copy}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
       <!-- Capability -->
       <section class="py-20 md:pt-32 md:pb-28">
         <div class={`${container} grid gap-10 md:grid-cols-[.85fr_1.15fr] md:gap-27`}>
@@ -404,7 +376,7 @@ const stats = [
             </h2>
             <p class="mb-4 text-[0.94rem] leading-relaxed text-brand-muted">I started as a software engineer and moved into technical product leadership because the hardest product problems span both disciplines.</p>
             <p class="mb-4 text-[0.94rem] leading-relaxed text-brand-muted">I have built AI products from zero to revenue, designed and shipped production software, led distributed teams, raised capital and worked directly with enterprise customers.</p>
-            <p class="mb-5 text-[0.94rem] leading-relaxed text-brand-muted">I now bring that combination to organisations that need a senior engineer who can make strong product decisions and remain accountable for the working result. I also provide focused AI advice for teams deciding what to build and how to approach it.</p>
+            <p class="mb-5 text-[0.94rem] leading-relaxed text-brand-muted">I now bring that combination to organisations that need a senior engineer who can make strong product decisions and remain accountable for the working result. I also provide focused AI advice for teams deciding how to leverage this new capability in their organisations.</p>
             <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold no-underline hover:text-brand-deep">
               Work with me <MoveRight className="size-4" />
             </a>
