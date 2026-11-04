@@ -60,11 +60,11 @@ const services = [
     icon: "ShieldCheck",
     number: "04",
     title: "AI transformation, governance & assurance",
-    copy: "Identify useful AI opportunities and design the workflows, ownership and controls needed to put them into practice.",
+    copy: "Identify useful AI opportunities and connect them to practical workflows, proportionate controls and an implementation plan.",
     items: [
       "AI opportunity and maturity assessment",
-      "Operating models, decision rights and human oversight",
-      "Procurement controls and implementation options",
+      "Governance, human oversight and procurement",
+      "Operating models and implementation options",
     ],
   },
 ]
@@ -80,74 +80,20 @@ const values = [
 const audiences = [
   ["01", "Founders & early-stage teams", "You need senior technical and product leadership to turn a real opportunity into a credible, production-ready product."],
   ["02", "Product & technology leaders", "You have an important initiative or delivery problem that needs experienced execution, not another layer of management."],
-  ["03", "Consultancies & delivery partners", "You need a senior specialist who can own a defined workstream, work within your client relationship and connect technical detail to practical decisions."],
-  ["04", "Government & regulated organisations", "You need to assess where AI is useful, protect professional judgement and translate existing strategies into workable processes and controls."],
+  ["03", "Agencies, consultancies & delivery partners", "You need a senior specialist who can join a client engagement, provide clear technical advice and take ownership of hands-on delivery."],
+  ["04", "Government & regulated organisations", "You need to identify where AI creates value and move from policy into safe, practical implementation."],
 ]
 
 const projects = [
-  {
-    title: "AI transformation & operating models",
-    role: "Consulting approach & method development",
-    category: "Government & high-trust environments",
-    copy: "Developed an AI transformation and enablement approach for New Zealand government and regulated organisations, focused on service quality, public value and accountable delivery.",
-    details: [
-      ["Opportunity assessment", "Designed the SPEAR rubric to assess suitability, problem fit, explainability, acceptability and return. It explicitly compares AI with process redesign and conventional automation."],
-      ["Governance & people", "Developed a six-pillar approach covering accountability, security and data readiness, monitoring, workforce capability, ethics and legal alignment. Defined central and embedded responsibilities through a hub-and-spoke model."],
-      ["Practical decisions", "The method connects decision rights, procurement controls, vendor-neutral model selection and sequenced roadmaps. It is tailored to the organisation rather than treated as a universal checklist."],
-    ],
-    tags: ["Opportunity assessment", "Decision rights", "Public value"],
-  },
-  {
-    title: "Porticus",
-    role: "Founder & lead product engineer",
-    category: "AI compliance platform",
-    copy: "Built an AI-native platform that turns complex operational documents and obligations into structured, source-traceable compliance programmes.",
-    details: [
-      ["The problem", "Requirements are spread across standards, regulations and internal documents. People need to understand what applies, where it came from and what evidence supports it."],
-      ["My contribution", "Designed and built the production document pipeline, structured extraction, requirement matching and cross-programme relationships, alongside the application and cloud infrastructure."],
-      ["Controls in the workflow", "Linked requirements to source material and built validation, confidence thresholds, conservative fallbacks and human-review gates. Connected the analysis to evidence, ownership and audit trails."],
-    ],
-    tags: ["Source traceability", "Human review", "Production AI"],
-  },
-  {
-    title: "AI investment intelligence",
-    role: "Product scoping & hands-on AI engineering",
-    category: "Confidential client engagement",
-    copy: "Built a document-ingestion and analysis system that turns unstructured company material into investment memos with source-verifiable claims.",
-    details: [
-      ["The problem", "Useful information arrives in pitch decks, business plans and other inconsistent documents. Reviewers need to inspect the evidence behind an analytical statement."],
-      ["My contribution", "Scoped the pilot and built file conversion, organisation-specific retrieval, multi-agent memo generation and a review interface using Node.js, React and Azure."],
-      ["Evidence & review", "Tracked citations back to source documents and presented assertions alongside supporting passages, so reviewers could check the basis for the analysis rather than rely on a fluent summary."],
-    ],
-    tags: ["Document analysis", "Source-backed citations", "Reviewer workflows"],
-  },
-  {
-    title: "SubQuery & OnFinality",
-    role: "Chief Product Officer",
-    category: "Blockchain infrastructure",
-    copy: "Led product and engineering through seed stage, product-market fit, token generation and public listing, while building a 40+ person global team.",
-    details: [],
-    tags: ["$20M+ raised", "200K+ community", "Developer platforms"],
-  },
-  {
-    title: "8ai",
-    role: "Co-founder & CTO",
-    category: "AI customer service",
-    copy: "Built a production AI support product from zero to revenue, combining multi-agent workflows with knowledge-grounded conversations.",
-    details: [],
-    tags: ["RAG", "Multi-agent", "Cashflow positive"],
-  },
-  {
-    title: "Sentro",
-    role: "Technical product leadership & engineering",
-    category: "Insurance technology",
-    copy: "Led delivery of a group-insurance platform, then returned to deliver production features across .NET, Angular and React.",
-    details: [],
-    tags: ["Regulated delivery", ".NET", "Azure"],
-  },
+  { title: "Porticus", role: "Founder & lead product engineer", category: "AI compliance platform", copy: "Personally building an AI-native platform that turns operational documents and obligations into structured, source-traceable compliance programmes. Built the document-processing pipeline, structured extraction and requirement matching, with source links, confidence thresholds and human-review gates.", tags: ["LLM pipelines", "Event-driven Azure", "Knowledge graphs"], color: "bg-brand-ocean" },
+  { title: "SubQuery & OnFinality", role: "Chief Product Officer", category: "Blockchain infrastructure", copy: "Led product and engineering through seed stage, product-market fit, token generation and public listing, while building a 40+ person global team.", tags: ["$20M+ raised", "200K+ community", "Developer platforms"], color: "bg-brand-slate" },
+  { title: "8ai", role: "Co-founder & CTO", category: "AI customer service", copy: "Built a production AI support product from zero to revenue, combining multi-agent workflows with knowledge-grounded conversations.", tags: ["RAG", "Multi-agent", "Cashflow positive"], color: "bg-brand-coral" },
+  { title: "AI transformation & governance", role: "Consulting approach & method development", category: "Government & high-trust environments", copy: "Developed an AI transformation approach for New Zealand government and regulated organisations. Designed the SPEAR opportunity-assessment rubric and a six-pillar governance model, connecting use-case selection to accountability, human oversight, procurement and implementation planning. The method considers process redesign and conventional automation alongside AI.", tags: ["Opportunity assessment", "Governance", "Implementation planning"], color: "bg-brand-green" },
+  { title: "Sentro", role: "Technical product leadership & engineering", category: "Insurance technology", copy: "Led delivery of a group-insurance platform, then returned to deliver production features across .NET, Angular and React.", tags: ["Regulated delivery", ".NET", "Azure"], color: "bg-brand-deep" },
 ]
 
 const moreWork = [
+  ["AI investment intelligence", "Built investment-memo workflows for a confidential client using Node.js, React and Azure, combining document ingestion, organisation-specific retrieval and multi-agent analysis with source-backed citations for review."],
   ["Backstory", "Product strategy for sustainability-certification software."],
   ["Bitquery", "AI-enabled lead intelligence and churn analysis for blockchain data."],
   ["Workplace SaaS", "Production features, test automation and architecture improvements."],
@@ -155,16 +101,10 @@ const moreWork = [
 ]
 
 const advisoryOutputs = [
-  ["01", "Current-state assessment", "A concise view of tools, data, workflows, constraints and readiness, separating confirmed facts from assumptions."],
-  ["02", "Prioritised opportunities", "Use cases assessed for suitability, value, explainability and acceptance, with non-AI alternatives considered alongside AI."],
-  ["03", "Workflow & governance design", "Recommended responsibilities, approval points, human-review gates, information controls and escalation routes."],
-  ["04", "Implementation options", "Sequenced next steps, build-versus-buy choices, dependencies and measures for quality, net effort and value."],
-]
-
-const partnerBenefits = [
-  ["A bounded workstream", "Agree the questions, deliverables and interfaces up front. I take responsibility for the specialist work without creating a parallel programme."],
-  ["Technical depth, clear advice", "Translate between business, policy, product and technical teams. Explain options and constraints in language stakeholders can use to make decisions."],
-  ["A useful handover", "Work within your delivery approach and confidentiality requirements. Leave clear recommendations, documented assumptions and next steps the wider team can own."],
+  ["Opportunity assessment", "A prioritised view of where AI is useful, with process changes and conventional automation considered too."],
+  ["Technical direction", "Architecture, data readiness and build-versus-buy options grounded in delivery experience."],
+  ["Workflows & governance", "Practical responsibilities, human-review points, information controls and procurement considerations."],
+  ["Implementation roadmap", "Sequenced next steps, dependencies and measures to test quality and value."],
 ]
 
 const capabilities = [
@@ -172,7 +112,7 @@ const capabilities = [
   ["Product engineering", "React, TypeScript, Node.js, .NET Core, C#, Angular, REST APIs, SQL, PostgreSQL and Microsoft SQL Server."],
   ["Cloud & operations", "Azure, AWS, GCP, serverless and event-driven systems, CI/CD, monitoring, secure infrastructure and cost optimisation."],
   ["Product & commercial", "Discovery, architecture, roadmaps, UX, delivery governance, team design, pricing, partnerships, enterprise sales and fundraising."],
-  ["AI governance & operating models", "Opportunity assessment, decision rights, human oversight, procurement controls, data readiness, monitoring and implementation roadmaps."],
+  ["AI advisory & governance", "Opportunity assessment, operating models, human oversight, procurement controls and practical implementation roadmaps."],
 ]
 
 const howIWork = [
@@ -192,7 +132,7 @@ const stats = [
 ---
 
 <Layout
-  description="James Bayly combines hands-on AI engineering with practical advisory work: opportunity assessment, operating models, governance and production delivery."
+  description="James Bayly is a hands-on AI product engineer and technical founder, building production software and providing practical AI, architecture and governance advice."
 >
   <div class="min-h-svh overflow-hidden bg-white text-brand-ink">
     <Header client:load />
@@ -214,7 +154,7 @@ const stats = [
               products.
             </h1>
             <p class="mb-8 max-w-[580px] text-[1rem] leading-relaxed text-brand-muted md:text-[1.1rem]">
-              I help organisations identify where AI creates value, design the workflows and controls around it, and build systems that work in production. From a focused assessment to hands-on delivery, I connect product judgement, engineering and practical governance.
+              I work from customer problem to production system: defining the product, making the architecture decisions, writing the software and staying accountable through launch, operations and growth. I also help teams assess AI opportunities and make practical decisions about implementation and governance.
             </p>
             <div class="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-7">
               <ButtonLink href="#contact" size="lg">
@@ -224,9 +164,6 @@ const stats = [
                 See selected work <ArrowDownRight className="size-4" />
               </a>
             </div>
-            <a href="#ai-advisory" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-deep no-underline hover:underline">
-              Looking for AI advisory rather than a build? <ArrowRight className="size-4 shrink-0" />
-            </a>
             <p class="mt-8 flex items-center gap-2 text-sm text-brand-muted">
               <span class="size-1.5 rounded-full bg-brand-coral"></span>
               Queenstown-based. Working across New Zealand, Australia and worldwide.
@@ -264,7 +201,7 @@ const stats = [
           <div>
             <h2 class={`${sectionHeading} mb-6`}>There is a wide gap between a good plan and a finished product.</h2>
             <p class="max-w-[665px] text-lg leading-relaxed text-brand-muted">
-              Complex projects fail in the gap between a credible plan and a working system. I connect product judgement, software engineering, delivery and commercial reality. Sometimes the next useful step is a build; sometimes it is a clear decision about what to do, who owns it and what needs to be in place first.
+              Complex projects fail in the execution gap between a credible plan and a working system. I bridge it by combining product judgement, software engineering, delivery and commercial reality in one engagement. That hands-on experience also informs the advice I give before a team commits to a build.
             </p>
           </div>
         </div>
@@ -309,7 +246,7 @@ const stats = [
             <h2 class="font-heading text-[clamp(2.3rem,4.5vw,4.35rem)] leading-[1.01] font-medium tracking-[-0.07em]">How I can help.</h2>
           </div>
           <p class="max-w-[340px] text-base leading-relaxed text-white/70">
-            Bring me in for a focused AI assessment, a defined product, embedded engineering capacity, or hands-on technical leadership across an initiative.
+            Bring me in for a defined AI product, embedded engineering capacity, hands-on technical leadership, or focused AI advisory.
           </p>
         </div>
         <div class={`${container} grid border-t border-l border-white/25 sm:grid-cols-2 lg:grid-cols-4`}>
@@ -339,33 +276,9 @@ const stats = [
           <ButtonLink size="lg" href="#contact">
             Discuss a project <ArrowRight className="size-4" />
           </ButtonLink>
-        </div>
-      </section>
-
-      <!-- Focused AI advisory -->
-      <section id="ai-advisory" class="py-20 md:py-32">
-        <div class={container}>
-          <div class="mb-10 grid gap-5 md:mb-14 md:grid-cols-[.85fr_1.15fr] md:gap-16">
-            <div>
-              <p class={sectionKicker}>AI advisory & consulting</p>
-              <h2 class={sectionHeading}>Clear decisions before a bigger commitment.</h2>
-            </div>
-            <div class="max-w-[620px] self-end">
-              <p class="mb-4 text-lg leading-relaxed text-brand-muted">A focused engagement can stand on its own or fit within a wider programme. We agree the questions, deliverables and review points up front.</p>
-              <p class="text-base leading-relaxed text-brand-muted">I start with your existing strategy, tools and ways of working. The aim is to make AI useful in real workflows, not add another disconnected pilot or rewrite work that is already settled.</p>
-            </div>
-          </div>
-          <div class="grid border-t border-l border-brand-line sm:grid-cols-2 lg:grid-cols-4">
-            {advisoryOutputs.map(([number, title, copy]) => (
-              <article class="border-r border-b border-brand-line p-6">
-                <span class="mb-8 block text-xs font-bold text-brand-deep">{number}</span>
-                <h3 class="mb-3 font-heading text-xl font-semibold tracking-[-0.045em]">{title}</h3>
-                <p class="text-sm leading-relaxed text-brand-muted">{copy}</p>
-              </article>
-            ))}
-          </div>
-          <p class="mt-7 max-w-[760px] text-sm leading-relaxed text-brand-muted">Not every problem needs AI. A process change, better search or conventional automation may be the better answer. The scope stays proportionate to the decision, with clear human accountability and a practical way to test value.</p>
-          <a href="#contact" class="mt-6 inline-flex items-center gap-2 text-sm font-bold no-underline hover:text-brand-deep">Discuss a focused engagement <ArrowRight className="size-4" /></a>
+          <a href="#ai-advisory" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-aqua no-underline hover:underline sm:mt-0 sm:ml-6">
+            Explore AI advisory <ArrowRight className="size-4" />
+          </a>
         </div>
       </section>
 
@@ -374,28 +287,18 @@ const stats = [
         <div class={`${container} mb-10 grid gap-4 md:mb-16 md:grid-cols-[25%_1fr] md:gap-8`}>
           <p class={sectionKicker}>Selected work</p>
           <div>
-            <h2 class={`${sectionHeading} mb-5`}>Practical methods. Working systems.</h2>
-            <p class="max-w-[520px] text-base leading-relaxed text-brand-muted">Developed consulting methods alongside hands-on delivery across compliance, evidence-backed analysis, AI products and regulated software. Confidential client work is described without identifying the client.</p>
+            <h2 class={`${sectionHeading} mb-5`}>Built in the real world.</h2>
+            <p class="max-w-[520px] text-base leading-relaxed text-brand-muted">Production work across AI products, developer infrastructure, compliance, regulated delivery and global startups, alongside practical AI advisory methods.</p>
           </div>
         </div>
-        <div class={`${container} grid gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3`}>
-          {projects.map((project) => (
-            <article class="overflow-hidden border border-brand-line bg-white">
+        <div class={`${container} grid gap-4 md:grid-cols-12 md:gap-5`}>
+          {projects.map((project, index) => (
+            <article class={`${index < 2 ? "md:col-span-6" : index === 4 ? "md:col-span-12 lg:col-span-4" : "md:col-span-6 lg:col-span-4"} overflow-hidden border border-brand-line bg-white`}>
               <div class="p-6">
                 <p class="mb-5 text-[0.66rem] font-bold tracking-[0.1em] text-brand-deep uppercase">{project.category}</p>
                 <h3 class="mb-1 font-heading text-2xl font-semibold tracking-[-0.055em]">{project.title}</h3>
                 <p class="mb-4 text-xs font-semibold text-brand-muted">{project.role}</p>
                 <p class="text-sm leading-relaxed text-brand-muted">{project.copy}</p>
-                {project.details.length > 0 && (
-                  <dl class="mt-6 grid gap-5 border-t border-brand-line pt-5">
-                    {project.details.map(([label, copy]) => (
-                      <div>
-                        <dt class="mb-1 text-xs font-bold text-brand-deep">{label}</dt>
-                        <dd class="text-sm leading-relaxed text-brand-muted">{copy}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                )}
                 <div class="mt-5 flex flex-wrap gap-1.5">
                   {project.tags.map((tag) => (
                     <span class="border border-brand-line px-2 py-1 text-[0.65rem] font-semibold text-brand-muted">{tag}</span>
@@ -407,7 +310,7 @@ const stats = [
         </div>
         <div class={`${container} mt-12 md:mt-19`}>
           <p class={sectionKicker}>Additional experience</p>
-          <div class="grid border-t border-l border-brand-line sm:grid-cols-2 lg:grid-cols-4">
+          <div class="grid border-t border-l border-brand-line sm:grid-cols-2 lg:grid-cols-5">
             {moreWork.map(([title, copy]) => (
               <article class="relative min-h-[137px] border-r border-b border-brand-line p-5 md:min-h-[190px]">
                 <h3 class="mb-2 font-heading text-base font-semibold tracking-[-0.04em]">{title}</h3>
@@ -415,6 +318,29 @@ const stats = [
                 <ArrowDownRight className="absolute right-4 bottom-4 size-4 text-brand-deep" />
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Supporting AI advisory offer -->
+      <section id="ai-advisory" class="py-16 md:py-20">
+        <div class={`${container} grid gap-8 md:grid-cols-[.85fr_1.15fr] md:gap-16`}>
+          <div>
+            <p class={sectionKicker}>AI advisory & consulting</p>
+            <h2 class="mb-5 font-heading text-[clamp(1.9rem,3vw,3rem)] leading-[1.05] font-medium tracking-[-0.055em]">Practical advice, grounded in building.</h2>
+            <p class="text-base leading-relaxed text-brand-muted">Not every engagement needs to start with code. I can help assess an AI opportunity, work through technical and governance questions, and define a useful next step. This can be a focused piece of work or lead into hands-on delivery.</p>
+          </div>
+          <div>
+            <dl class="grid gap-5 border-t border-brand-line pt-5 sm:grid-cols-2">
+              {advisoryOutputs.map(([title, copy]) => (
+                <div>
+                  <dt class="mb-2 font-heading text-base font-semibold tracking-[-0.035em]">{title}</dt>
+                  <dd class="text-sm leading-relaxed text-brand-muted">{copy}</dd>
+                </div>
+              ))}
+            </dl>
+            <p class="mt-6 border-t border-brand-line pt-5 text-sm leading-relaxed text-brand-muted">For consultancies and delivery partners, I can own a defined AI or technical workstream within your wider engagement, working alongside strategy, data and change specialists.</p>
+            <a href="#contact" class="mt-5 inline-flex items-center gap-2 text-sm font-bold no-underline hover:text-brand-deep">Discuss a focused engagement <ArrowRight className="size-4" /></a>
           </div>
         </div>
       </section>
@@ -437,27 +363,6 @@ const stats = [
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      <!-- Consulting partnerships -->
-      <section id="partners" class="bg-brand-cream py-20 md:py-28">
-        <div class={container}>
-          <div class="mb-10 grid gap-5 md:grid-cols-[.85fr_1.15fr] md:gap-16">
-            <div>
-              <p class={sectionKicker}>For consultancies & delivery partners</p>
-              <h2 class={sectionHeading}>Specialist depth.<br />One joined-up team.</h2>
-            </div>
-            <p class="max-w-[580px] self-end text-lg leading-relaxed text-brand-muted">Bring me into an existing client engagement for AI assessment, operating-model design or technical delivery. I work alongside your strategy, data and change specialists, connecting the technical detail to the decisions your client needs to make.</p>
-          </div>
-          <div class="grid border-t border-l border-brand-line md:grid-cols-3">
-            {partnerBenefits.map(([title, copy]) => (
-              <article class="border-r border-b border-brand-line p-6">
-                <h3 class="mb-3 font-heading text-xl font-semibold tracking-[-0.045em]">{title}</h3>
-                <p class="text-sm leading-relaxed text-brand-muted">{copy}</p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -499,7 +404,7 @@ const stats = [
             </h2>
             <p class="mb-4 text-[0.94rem] leading-relaxed text-brand-muted">I started as a software engineer and moved into technical product leadership because the hardest product problems span both disciplines.</p>
             <p class="mb-4 text-[0.94rem] leading-relaxed text-brand-muted">I have built AI products from zero to revenue, designed and shipped production software, led distributed teams, raised capital and worked directly with enterprise customers.</p>
-            <p class="mb-5 text-[0.94rem] leading-relaxed text-brand-muted">I now bring that combination to organisations and consulting teams that need practical AI advice grounded in delivery experience, or a senior engineer who can make strong product decisions and remain accountable for the working result.</p>
+            <p class="mb-5 text-[0.94rem] leading-relaxed text-brand-muted">I now bring that combination to organisations that need a senior engineer who can make strong product decisions and remain accountable for the working result. I also provide focused AI advice for teams deciding what to build and how to approach it.</p>
             <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold no-underline hover:text-brand-deep">
               Work with me <MoveRight className="size-4" />
             </a>
