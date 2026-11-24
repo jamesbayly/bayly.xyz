@@ -26,7 +26,7 @@ Armenia had spent centuries producing these places, I had given myself forty-eig
 
 ![Noravank against the red cliffs](https://photos.smugmug.com/Armenia/i-5nSZhfv/1/NFr4jFB2NsgmTSTnn3cJzGmnKWHDVVzz4nr2K9KRj/X3/DSC03708-X3.jpg)
 
-Noravank sits against towering red cliffs, the sort of setting that would make a reasonably ordinary building look magnificent. The medieval Armenians had put a magnificent building there instead. Overkill, frankly.
+Noravank sits against towering red cliffs, the sort of setting that would make a reasonably ordinary building look magnificent. The medieval Armenians had put a magnificent building there instead.
 
 ![Noravank in its surroundings](https://photos.smugmug.com/Armenia/i-HrFJ9QK/1/LRj4Kg9Zkwhjk3x253z2VxZ5mp2QkqK8gFstbbVbG/X2/DSC03707-X2.jpg)
 
