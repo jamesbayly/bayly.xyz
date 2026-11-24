@@ -8,7 +8,7 @@ tag:
   - Armenia
 ---
 
-I spent two days in Armenia, heading out of the city on russian-speaking tours each morning. This is not enough time to understand a country. It is, apparently, enough time to become quite unreasonable about its architectural heritage.
+I spent two days in Armenia, heading out of the city on Russian-speaking tours each morning. This is not enough time to understand a country. It is, apparently, enough time to become quite unreasonable about its architectural heritage.
 
 ![Tatev, the best of them all](https://photos.smugmug.com/Armenia/i-WvkfXGw/1/LgXhM93Qkx5rxqcfJM6TmzwcMJdnQsJXDtdvJfVsr/X3/DSC03726-X3.jpg)
 
@@ -22,13 +22,13 @@ Another one? Incredible.
 
 Another one?
 
-Armenia had spent centuries producing these places, I had given myself forty-eight hours to appreciate theme. Somewhere along the way, a thousand years of history and an exceptionally well-chosen cliff stopped being enough.
+Armenia had spent centuries producing these places, I had given myself forty-eight hours to appreciate them. Somewhere along the way, a thousand years of history and an exceptionally well-chosen cliff stopped being enough.
 
 ![Noravank against the red cliffs](https://photos.smugmug.com/Armenia/i-5nSZhfv/1/NFr4jFB2NsgmTSTnn3cJzGmnKWHDVVzz4nr2K9KRj/X3/DSC03708-X3.jpg)
 
 Noravank sits against towering red cliffs, the sort of setting that would make a reasonably ordinary building look magnificent. The medieval Armenians had put a magnificent building there instead. Overkill, frankly.
 
-![Norovank in its surroundings](https://photos.smugmug.com/Armenia/i-HrFJ9QK/1/LRj4Kg9Zkwhjk3x253z2VxZ5mp2QkqK8gFstbbVbG/X2/DSC03707-X2.jpg)
+![Noravank in its surroundings](https://photos.smugmug.com/Armenia/i-HrFJ9QK/1/LRj4Kg9Zkwhjk3x253z2VxZ5mp2QkqK8gFstbbVbG/X2/DSC03707-X2.jpg)
 
 At Sevanavank, the backdrop changes to Lake Sevan. Different landscape, more ancient churches. Even an actual wedding was taking place in this one.
 
@@ -54,7 +54,7 @@ Armenia wasn't simply a blank space between empires. It had its own rulers and a
 
 ![Inside the church](https://photos.smugmug.com/Armenia/i-3cVJTWT/0/Nh2DHqGc7M5C4LfFCC9QncN5xbdCmZ4gC9qbGjLDB/X3/DSC03730-X3.jpg)
 
-Its the reason for the monastaries - Armenia adopted Christianity in the early fourth century. Over the centuries, its monasteries became much more than places to pray. Geghard had a school, a library, and a scriptorium. But nearly all included defensive walls and princely tombs. Education, religion, protection, and the interests of powerful families all occupied the same site.
+It's the reason for the monasteries - Armenia adopted Christianity in the early fourth century. Over the centuries, its monasteries became much more than places to pray. Geghard had a school, a library, and a scriptorium. But nearly all included defensive walls and princely tombs. Education, religion, protection, and the interests of powerful families all occupied the same site.
 
 ![A musician earns his living](https://photos.smugmug.com/Armenia/i-t867kGL/0/Kg6wxbdW4Lv3z58dtdtht4nZ4g7W4D8VvjXb3r2wh/X2/DSC03652-X2.jpg)
 
